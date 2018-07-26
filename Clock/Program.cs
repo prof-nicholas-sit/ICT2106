@@ -14,12 +14,15 @@ namespace ICT2106.Clock
             Clock clock = new Clock();
 
             // create some alarms
-            ConsoleAlarm alarm1 = new ConsoleAlarm("Wake up!");
-            ConsoleAlarm alarm2 = new ConsoleAlarm("Dinner's ready!");
+            TextAlarm alarm1 = new TextAlarm("Wake up!");
+            BeepAlarm alarm2 = new BeepAlarm();
 
             // attach the alarms to the clock
             clock.Attach(alarm1);
             clock.Attach(alarm2);
+			
+			alarm1.Update();
+			alarm2.Update();
 
             // run the clock for thirty seconds
             clock.Run(30);
