@@ -20,9 +20,6 @@ namespace ICT2106.Clock
             // attach the alarms to the clock
             clock.Attach(alarm1);
             clock.Attach(alarm2);
-			
-			alarm1.Update();
-			alarm2.Update();
 
             // run the clock for thirty seconds
             clock.Run(30);
